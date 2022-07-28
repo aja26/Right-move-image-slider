@@ -7,8 +7,6 @@ let third = document.getElementById('third').children[0];
 
 let imageCount = document.getElementById('image-count');
 
-
-const images = document.querySelector('img/img-1.jpg');
 const nums = [1,2,3,4,5,6,7,8];
 
 const numLength = nums.length;
