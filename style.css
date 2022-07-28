@@ -2,6 +2,23 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100%;
+     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; 
+
+}
+
+main{
+    width: 1250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 5rem;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -10,31 +27,32 @@
     position: relative;
     height: 435px;
     margin-top: 30px;
+    width: 100%;
 }
 
 .image-container{
-    width: 1165px;
+   width: 100%;
     display: flex;
     overflow: hidden;
     position: relative;
 }
 
 .column{
-    width: 775px;
+    width: 70%;
     height: 435px;
     overflow: hidden;
     margin-right:8px
 }
 
 .column2{
-    width: 380px;
+    width: 30%;
     overflow: hidden;
 }
 
 .first-image{
-height: 100%;
-position: relative;
-overflow: hidden;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .second-image{
@@ -58,11 +76,13 @@ overflow: hidden;
 
 img{
     width: 100%;
+    height: 100%;
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
+    object-fit: cover;
 }
 
 .image-count{
@@ -70,12 +90,15 @@ img{
     z-index: 2;
     bottom: 16px;
     right: 20px;
+    font-size: 12px;
     background: white;
     padding: 10px;
-    width: 80px;
+    width: 75px;
+    height: 35px;
     display: flex;
     justify-content: center;
-    border-radius: 5px;
+    align-items: center;
+    border-radius: 3px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .image-count i{
@@ -86,11 +109,15 @@ img{
     display: none;
     height: 450px;
     z-index: 2;
+   
 }
 
 .container:hover .hover-container{
     display: block;
+    position: absolute;
     z-index: 2;
+    width: 100%;
+   
 }
 
 .hover-container button{
@@ -118,4 +145,24 @@ img{
 .hover-container button i{
     font-size: 30px;
     color: #fff;
+}
+
+@media only screen and (max-width: 1050px)  {
+    main{
+        width: 80%; 
+        padding: 0 2rem;
+    }
+
+    .container{
+        height: 100%;
+    }
+
+    .column2{
+        display: none;
+    }
+      
+    .column{
+        width: 100%;
+        height: 50vw;
+    }
 }
